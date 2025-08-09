@@ -1,22 +1,60 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Happy Raksha Bandhan</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #fff8dc;
-            color: #8b0000;
-        }
-        h1 {
-            font-size: 50px;
-            margin-top: 20%;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Raksha Bandhan — Shareable Card</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Happy Raksha Bandhan 🎉</h1>
-    <p>Wishing you joy, love, and happiness!</p>
+  <header class="site-header">
+    <h1>Happy Raksha Bandhan</h1>
+    <p>Create a shareable greeting card — customize name, followers and message.</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <label>
+        Name:
+        <input id="input-name" placeholder="e.g. Mayank Goyal">
+      </label>
+      <label>
+        Followers count:
+        <input id="input-followers" type="number" placeholder="e.g. 202">
+      </label>
+      <label>
+        Short message:
+        <input id="input-msg" placeholder="Type a short message...">
+      </label>
+      <label>
+        Background image URL (optional):
+        <input id="input-img" placeholder="https://images.unsplash.com/...">
+      </label>
+      <div class="buttons">
+        <button id="btn-generate">Generate Share Link</button>
+        <button id="btn-copy" title="Copy current page link">Copy Link</button>
+      </div>
+      <p class="hint">Tip: after generating, copy the link and share it. The recipient will see your customized card.</p>
+    </section>
+
+    <section class="preview">
+      <div id="card" class="card">
+        <div class="card-bg" id="card-bg"></div>
+        <div class="card-content">
+          <h2 id="card-title">Happy Raksha Bandhan</h2>
+          <p class="to">To: <span id="card-name">Brother / Sister</span></p>
+          <p id="card-msg">Wishing you love, laughter and lots of sweets!</p>
+          <p class="followers"><strong id="card-followers">0</strong> followers</p>
+        </div>
+      </div>
+      <p class="share-note">Open the generated link in a new tab (or share it) — URL carries the customization.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Made for demo — deployable to GitHub Pages / Netlify. <a href="https://happy-raksha-bandhan-v1.netlify.app/" target="_blank" rel="noreferrer">Example live site</a></small>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
